@@ -5,10 +5,23 @@ import {Provider} from 'react-redux';
 
 import AspectView from './lib/AspectView';
 import createStore from './lib/store';
+import styles, {color} from './lib/styles';
 
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
-const Navigator = createStackNavigator({AspectView});
+const Navigator = createStackNavigator(
+  {
+    AspectView
+  },
+  {
+    cardStyle: styles.navigationCard,
+    navigationOptions: {
+      headerStyle: styles.navigationHeader,
+      headerTintStyle: styles.navigationHeaderTintStyle,
+      headerTitleStyle: styles.navigationHeaderTitle,
+    },
+  },
+);
 
 export default class App extends React.Component {
   constructor() {
