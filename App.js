@@ -18,7 +18,6 @@ const Navigator = createStackNavigator(
     navigationOptions: {
       headerStyle: styles.navigationHeader,
       headerTintColor: color.light,
-      headerTintStyle: styles.navigationHeaderTintStyle,
       headerTitleStyle: styles.navigationHeaderTitle,
     },
   },
